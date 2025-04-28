@@ -47,9 +47,26 @@ namespace TicTacToe_2804_H1
             if (CheckWin())
             {
 
-                _info.RegisterWin(isXTurn);
-                MessageBox.Show($"Spiller {(isXTurn ? 'X' : 'O')} har vundet!", "Game Over");
-                ResetBoard();
+                _info.RegisterWin(isXTurn); // Registrer sejren.
+
+
+
+                var result = MessageBox.Show(
+                    $"Spiller {(isXTurn ? 'X' : 'O')} har vundet!\nVil du spille igen?",
+                    "Game Over",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    ResetBoard();
+                  
+                }
+                else
+                {
+                    Application.Current.Shutdown();
+                }
+
                 return;
             }
 
