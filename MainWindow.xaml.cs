@@ -46,6 +46,8 @@ namespace TicTacToe_2804_H1
 
             if (CheckWin())
             {
+
+                _info.RegisterWin(isXTurn);
                 MessageBox.Show($"Spiller {(isXTurn ? 'X' : 'O')} har vundet!", "Game Over");
                 ResetBoard();
                 return;
