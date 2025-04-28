@@ -7,6 +7,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+           
+        </Grid.ColumnDefinitions>
+
+        <Button Name="Btn00" Click="Button_Click" FontSize="36" Grid.Row="1" Grid.Column="0"/>
+        <Button Name="Btn01" Click="Button_Click" FontSize="36" Grid.Row="1" Grid.Column="1"/>
+        <Button Name="Btn02" Click="Button_Click" FontSize="36" Grid.Row="1" Grid.Column="2"/>
+
+        <Button Name="Btn10" Click="Button_Click" FontSize="36" Grid.Row="2" Grid.Column="0"/>
+        <Button Name="Btn11" Click="Button_Click" FontSize="36" Grid.Row="2" Grid.Column="1"/>
+        <Button Name="Btn12" Click="Button_Click" FontSize="36" Grid.Row="2" Grid.Column="2"/>
+
+        <Button Name="Btn20" Click="Button_Click" FontSize="36" Grid.Row="3" Grid.Column="0"/>
+        <Button Name="Btn21" Click="Button_Click" FontSize="36" Grid.Row="3" Grid.Column="1"/>
+        <Button Name="Btn22" Click="Button_Click" FontSize="36" Grid.Row="3" Grid.Column="2"/>
+
+        <TextBlock Name="TxtPlayer1"
+           Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+           FontSize="24" TextAlignment="Center" Margin="5"
+           Text="{Binding ScoreText}" />
     </Grid>
 </Window>
